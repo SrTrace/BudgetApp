@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BudgetProvider} from "./contexts/BudgetsContexts";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <BudgetProvider>
+            <App/>
+        </BudgetProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
